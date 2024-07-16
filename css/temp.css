@@ -1,0 +1,105 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-gap: 5px;
+}
+
+.cell {
+  width: calc((100vw - 55px) / 11);
+  height: calc((100vw - 55px) / 11);
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Ensure cells are square even in larger viewports */
+@media (min-width: 1024px) {
+  .cell {
+      width: calc((1024px - 55px) / 11);
+      height: calc((1024px - 55px) / 11);
+  }
+}
+
+/* Specific styles for each element type */
+.mountain { background-color: #964B00; }
+.water { background-color: #a4dbee; }
+.town { background-color: #ffadad; }
+.forest { background-color: #88d498; }
+.farm { background-color: #fffd95; }
+
+#currentElement {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#currentElement p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Add to your style.css file */
+#nextElement {
+margin-top: 20px;
+text-align: center;
+}
+
+#nextElementShape {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* Assuming the largest shape is 3x3 */
+gap: 5px;
+justify-content: center;
+margin: 10px auto;
+}
+
+#nextElementShape .element-row {
+display: flex;
+}
+
+#nextElementShape .elementCell {
+width: 20px; /* or as per your design */
+height: 20px;
+border: 1px solid #ddd;
+margin: 1px;
+}
+
+#timeUnits {
+font-weight: bold;
+color: #333;
+}
+
+/* Transparent preview styles */
+.preview {
+opacity: 0.3; /* Semi-transparent */
+}
+
+.cell.mountain:hover {
+/* Maintain mountain appearance on hover */
+background-color: #964B00;
+background-size: cover;
+opacity: 1;
+}
+
+.shape-preview {
+opacity: 0.5; /* Semi-transparent */
+}
+
+/* Style for solid placed shape */
+.shape-placed {
+opacity: 1;
+}
+
+/* Full opacity for actual placement */
+.water,
+.town,
+.forest,
+.farm {
+opacity: 1;
+}

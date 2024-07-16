@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tile Placement Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="mapLabel">Potato Map</h1>
+    </header>
+    <main>
+        <div class="grid" id="gameBoard"></div>
+        <div id="season-display-and-gameInfo">
+            <div id="seasonsContainer">
+                <div id="seasonDisplay">
+                    <div id="spring" class="seasonBox">Spring: <span class="points">0</span> points</div>
+                    <div id="summer" class="seasonBox">Summer: <span class="points">0</span> points</div>
+                    <div id="autumn" class="seasonBox">Autumn: <span class="points">0</span> points</div>
+                    <div id="winter" class="seasonBox">Winter: <span class="points">0</span> points</div>
+                </div>
+                <div id="totalPoints">Total: 0 points</div>
+            </div>
+            <aside id="gameInfo">
+                <h2 id="currentSeasonLabel">Current season: Spring (AB)</h2>
+                <div id="currentSeasonProgress">Elapsed time in current season: <span id="elapsedTime">0</span>/7</div>
+                <div id="missionInfo">
+                    <div class=missionRectangle id="mission-a"></div>
+                    <div class=missionRectangle id="mission-b"></div>
+                    <div class=missionRectangle id="mission-c"></div>
+                    <div class=missionRectangle id="mission-d"></div>
+                </div>
+                <div id="currentElement">
+                    <h2>Current Element:</h2>
+                    <div id="currentElementType"></div>
+                    <div id="elementShapeContainer"></div>
+                    <div>Time Units: <span id="currentElementTime">0</span></div>
+                    <button id="rotateButton">Rotate</button>
+                    <button id="mirrorButton">Flip</button>
+                </div>
+            </aside>
+            borderland score:
+            <div id="borderlands-score">0</div>
+        </div>
+    </main>
+    <footer
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

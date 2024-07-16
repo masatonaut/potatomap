@@ -1,0 +1,287 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#mapLabel {
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+#seasonDisplay {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.seasonBox {
+  position: relative;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  flex-grow: 1;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+}
+
+#spring { background-color: #a8e6cf; }
+#summer { background-color: #ffd3b6; }
+#autumn { background-color: #ffaaa5; }
+#winter { background-color: #dcedc1; }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-gap: 5px;
+  margin-right: 20px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#season-display-and-gameInfo{
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+}
+
+#gameInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+#currentSeasonLabel,
+#currentSeasonProgress {
+  margin-bottom: 10px;
+}
+
+#missionInfo {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2,2fr);
+  grid-gap: 10px;
+}
+
+.missionScore {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 0.8em;
+  color: white;
+}
+
+
+.missionRectangle{
+  position: relative;
+  width: 250px;
+  height: 80px;
+  background-color: #333;
+  border-radius: 10px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #000;
+}
+
+
+#mission-a{
+  position: relative;
+}
+#mission-a::after{
+  content: 'A';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+#mission-b{
+  position: relative;
+}
+#mission-b::after{
+  content: 'B';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+#mission-c{
+  position: relative;
+}
+#mission-c::after{
+  content: 'C';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+#mission-d{
+  position: relative;
+}
+#mission-d::after{
+  content: 'D';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+
+#currentElementInfo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#elementVisual {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+#scoreBoard {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #currentElement {
+    width: auto;
+  }
+}
+
+.mountain { 
+  background-image: url('../assets/tiles/mountain.png'); 
+  background-size: cover;
+  background-position: center; 
+}
+
+#currentElement {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+#currentElement h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#elementShapeContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 70px;
+}
+
+.elementCell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.water { 
+  background-image: url('../assets/tiles/water.png'); 
+  background-size: cover;
+  background-position: center; 
+}
+.town { 
+  background-image: url('../assets/tiles/village.png'); 
+  background-size: cover;
+  background-position: center; 
+}
+.forest { 
+  background-image: url('../assets/tiles/forest.png'); 
+  background-size: cover;
+  background-position: center; 
+}
+.farm { 
+  background-image: url('../assets/tiles/farm.png'); 
+  background-size: cover;
+  background-position: center; 
+}
+
+#currentElementType, #currentElementTime {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.preview {
+opacity: 0.3;
+}
+
+.shape-preview {
+opacity: 0.5;
+}
+
+.shape-placed {
+opacity: 1;
+}
+
+.water,
+.town,
+.forest,
+.farm {
+opacity: 1;
+}
